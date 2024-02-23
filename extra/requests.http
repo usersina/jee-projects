@@ -1,0 +1,13 @@
+@baseTomcatUrl = http://localhost:8888
+
+### Default check (e.q. `curl -X GET "http://localhost:8888/"`)
+GET {{baseTomcatUrl}}
+
+### Index page
+GET {{baseTomcatUrl}}/servlet/
+
+### GET: Hello servlet
+GET {{baseTomcatUrl}}/servlet/hello
+
+### POST: Hello servlet
+POST {{baseTomcatUrl}}/servlet/hello?nom=John&prenom=Doe
