@@ -8,20 +8,17 @@
     <title>Home</title>
   </head>
   <body>
-    <%
-      session = request.getSession();
-      String nom = (String) session.getAttribute("nom");
-      if (nom==null){
-    %>
-    <form action="./connection" method="GET">
-      login : <input type="text" name="login" /><br />
-      password : <input type="password" name="mdp" /><br />
-      <input type="submit" value="se connecter" />
-    </form>
-    <%
-      } else {
-        request.getRequestDispatcher("./menu.jsp").forward(request, response);
-      }
-    %>
+    <c:choose>
+      <c:when test="${empty sessionScope.nom}">
+        <form action="./connection" method="GET">
+          Login : <input type="text" name="login" /><br />
+          Password : <input type="password" name="mdp" /><br />
+          <input type="submit" value="se connecter" />
+        </form>
+      </c:when>
+      <c:otherwise>
+        <jsp:forward page="./menu.jsp" />
+      </c:otherwise>
+    </c:choose>
   </body>
 </html>
