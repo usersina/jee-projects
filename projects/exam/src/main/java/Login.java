@@ -67,8 +67,7 @@ public class Login extends HttpServlet {
 					response.sendRedirect(request.getContextPath() + "/etudiant-trait");
 				}
 			} else {
-				// If the user doesn't exist, show an error message
-				request.setAttribute("error", "Invalid CIN or password");
+				// If the user doesn't exist, simply redirect to the login page
 				request.getRequestDispatcher("/login.jsp").forward(request, response);
 			}
 		} catch (SQLException e) {
