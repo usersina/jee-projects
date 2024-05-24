@@ -1,0 +1,15 @@
+@baseTomcatUrl = http://localhost:8081
+
+### Default check
+GET {{baseTomcatUrl}}/actuator
+
+### Get books
+GET {{baseTomcatUrl}}/livre
+
+### Create a book
+POST {{baseTomcatUrl}}/livre
+
+{
+    "titre": "Book 1",
+    "prix": 170
+}
