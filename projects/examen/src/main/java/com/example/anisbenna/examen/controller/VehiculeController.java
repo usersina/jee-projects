@@ -16,17 +16,17 @@ public class VehiculeController {
     @Autowired
     public VehiculeService vehiculeService;
 
-    @GetMapping("{marque}")
+    @GetMapping("/{marque}")
     public Vehicule trouverVehiculeParMarque(@PathVariable String marque) {
         return this.vehiculeService.trouverVehiculeParMarque(marque);
     }
 
-    @DeleteMapping("{idVehicule}")
+    @DeleteMapping("/{idVehicule}")
     public void supprimerVehicule(@PathVariable int idVehicule) {
         this.vehiculeService.supprimerVehicule(idVehicule);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public Vehicule mettreAJourVehicule(@PathVariable int id, @RequestBody Vehicule newVehicule) {
         return this.vehiculeService.mettreAJourVehicule(id, newVehicule);
     }
