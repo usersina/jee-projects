@@ -1,0 +1,9 @@
+@baseSpringUrl = http://localhost:8081
+
+### ================= Vehicule =================
+
+### Get my marque
+GET {{baseSpringUrl}}/vehicule/polo5
+
+### Delete by id
+DELETE {{baseSpringUrl}}/vehicule/1
