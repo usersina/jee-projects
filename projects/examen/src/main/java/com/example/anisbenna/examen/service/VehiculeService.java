@@ -1,7 +1,5 @@
 package com.example.anisbenna.examen.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,12 +12,12 @@ public class VehiculeService {
     private VehiculeRepository vehiculeRepository;
 
     /**
-     * Trouver tous les vehicules par une marque
+     * Trouver un vehicule par sa marque
      * 
-     * @param marque
-     * @return liste des vehicules
+     * @param marque la marque du vehicule
+     * @return objet Vehicule
      */
-    public List<Vehicule> trouverVehiculesParMarque(String marque) {
+    public Vehicule trouverVehiculeParMarque(String marque) {
         return vehiculeRepository.findByMarque(marque);
     }
 
