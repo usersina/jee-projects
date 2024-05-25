@@ -6,12 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.anisbenna.examen.models.Vehicule;
 import com.example.anisbenna.examen.service.VehiculeService;
 
-@RestController("/vehicule")
+@RestController
+@RequestMapping("/vehicule")
 public class VehiculeController {
     @Autowired
     public VehiculeService vehiculeService;
