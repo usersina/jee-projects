@@ -18,7 +18,7 @@ public class Vehicule {
 
     private String marque;
 
-    private int nombresPlaces;
+    private int nombrePlaces;
 
     private int kilometrage;
 
